@@ -1,0 +1,27 @@
+name: Build and publish DB artifact
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+
+  # Job to build and publish the dacpac
+  Build:
+    runs-on: self-hosted
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, 
+      - uses: actions/checkout@v3.3.0
+
+      # Build dacpac using dotnet build
+      - name: Build Database project
+        run: |
+          dotnet build
+
+      # Publish artifact
+      - uses: actions/upload-artifact@v3.1.2
+        with:
+          name: sqldb
+          path: ${{ github.workspace }}/bin/DB/ 
