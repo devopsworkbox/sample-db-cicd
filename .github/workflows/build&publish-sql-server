@@ -1,9 +1,9 @@
 name: Build and publish DB artifact
 
 on:
-  push:
-    branches: 
-      - main
+#  push:
+#    branches: 
+#      - main
 
 jobs:
 
