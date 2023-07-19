@@ -1,4 +1,4 @@
-$sonarScannerPath = "C:\Path\to\sonar-scanner\bin"
+$sonarScannerPath = ".\.sonar\scanner\bin"
 $projectKey = "sql-server-test"
 $sqlFilesPath = ".\dbo\"
 
