@@ -9,7 +9,7 @@ jobs:
 
   # Job to build and publish the dacpac
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, 
